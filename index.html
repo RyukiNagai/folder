@@ -18,30 +18,21 @@
     <style>
         html, body {
      height: 100%;
+     width: 100%;
    }
        body {
           font-family: Arial, sans-serif;
-          background-color: #ecf6f7;
+          background-color: #e8fdff;
           display: flex;
           flex-direction: column;
-          margin-top: 300px;
-          margin-bottom: 300px;
-      }
-      main {
-          font-family: Arial, sans-serif;
-          font-size:larger;
-          background-color: #ecf6f7;
-          flex: 1;
-      }
-      #main{
-        justify-items: center;
-        text-align: center;
-        align-self: center;
+          padding: 0;
+          width: 100%;
+          height: 100%;
       }
       .lang-button{
         position: fixed;
         top: 210px;
-        right: 80px;
+        right: 0px;
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -71,19 +62,19 @@
       }
       .card-container{
         margin-top: 30px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+        display: flex;
     justify-content:space-evenly;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
       }
       .card{
-  max-width: 400px;
+        max-width: 31%;
         border-radius: 2px;
         border-color: black;
         align-items: center;
         border-radius: 15px;
+        flex: 1;
         box-shadow: 0px 1px 3px black;
       }
       .card img{
@@ -104,7 +95,7 @@
       .btn-group{
         position: fixed;
         top: 210px;
-        left: 20px;
+        left: 0px;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -141,33 +132,7 @@
     </style>
     </head>
     <body>
-      <main id="bg">
-        <div class="container">
-        <div class="lang-button">
-          <button onclick="turnLang()"><img src="8462185.png" alt="" width="30" height="30" ></button>
-        </div>
-          <span class="btn-group dropend">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="jp12">
-              背景
-            </button>
-            <ul class="dropdown-menu">
-              <li><button onclick="turnBg('pngtree-a-background-of-orange-blue-and-yellow-gradients-with-gritty-appearance-image_16233934.jpg')" ><img src="pngtree-a-background-of-orange-blue-and-yellow-gradients-with-gritty-appearance-image_16233934.jpg" alt="" width="30" height="30"></button></li>
-              <li><button onclick="turnBg('chinese-bamboo-old-paper-background_1182-1412.jpeg')" ><img src="chinese-bamboo-old-paper-background_1182-1412.jpeg" alt="" width="30" height="30"></button></li>
-              <li><button onclick="turnBg('fundo-da-aguarela-do-verao_52683-84831.jpeg')" ><img src="fundo-da-aguarela-do-verao_52683-84831.jpeg" alt="" width="30" height="30"></button></li>
-            </ul>
-          </span>
-        </div>
-      <div class="container" id="main"> 
-        <img class="rounded-circle" src="d2984ec4b65a8568eab3dc2b640fc58e-removebg-preview.png" alt="" width="300" height="300">
-        <h1 id="jp1">長井隆紀と申します</h1>
-        <p id="description">此度は重大なネタ切れにより、誰にも解読されないよう日本語を使用しました。</p>
-        <div class="badge-container">
-          <p class="badge">Scratch</p>
-          <p class="badge">HTML</p>
-          <p class="badge">CSS</p>
-        </div>
         <section>
-      <h2  id="jp3">これまでのプロジェクト</h2>
       <div class="card-container">
         <div class="card" width="400">
             <img src="Captura de tela_2025-06-18_16-51-12.png" alt="" width="90%" height="90%">
@@ -205,6 +170,24 @@
               </div>
             </div>
             </div>
+            <div class="card" width="400">
+                <img src="Captura de tela_2025-06-18_22-09-18.png" alt="" width="90%" height="90%">
+              <div class="card-body">
+                <h3 class="card-title"  id="jp9">自主制作ゲーム</h3>
+                <h6 class="card-text"  id="jp10">Scratch上で自主制作シューティングゲームのプログラムを作成しました</h6>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="jp11">詳細</button>
+                <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="exampleModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                  <div class="modal-body">
+                    <p  id="jp7">いまだ未完成、随時更新中</p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  id="jp8">閉じる</button>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              </div>
           </div>
         </section>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
@@ -273,5 +256,4 @@
               bg.style.backgroundRepeat = 'no-repeat';
             }
           </script>
-      </main>
     </body>
